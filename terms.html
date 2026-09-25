@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - Automat</title>
+  <meta name="description" content="Terms of Service for Automat application, automating video publishing and analytics retrieval via TikTok API.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --card-bg: rgba(22, 27, 34, 0.85);
+      --border-color: rgba(240, 246, 252, 0.1);
+      --text-main: #c9d1d9;
+      --text-bright: #f0f6fc;
+      --text-muted: #8b949e;
+      --accent-gradient: linear-gradient(135deg, #fe2c55, #25f4ee);
+      --accent-tiktok: #fe2c55;
+      --accent-cyan: #25f4ee;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(254, 44, 85, 0.15) 0%, rgba(37, 244, 238, 0.05) 50%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+
+    header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 9999px;
+      background: rgba(254, 44, 85, 0.1);
+      border: 1px solid rgba(254, 44, 85, 0.25);
+      color: #ff6b8b;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .nav-links a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      opacity: 0.85;
+    }
+
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 36px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--accent-gradient);
+      border-radius: 2px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: rgba(37, 244, 238, 0.05);
+      border-left: 3px solid var(--accent-cyan);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Legal Agreement</div>
+      <h1>Terms of Service</h1>
+      <p class="subtitle">Effective Date: September 24, 2026 &bull; Application: <strong>Automat</strong></p>
+      <div class="nav-links">
+        <a href="terms.html">Terms of Service</a> &bull;
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </header>
+
+    <main class="content-card">
+      <section>
+        <h2>1. Acceptance of Terms</h2>
+        <p>By registering, authenticating, or using the <strong>Automat</strong> application ("Automat", "we", "our", or "the Service"), you agree to be bound by these Terms of Service. If you do not agree to these terms, you must discontinue using the Service immediately.</p>
+      </section>
+
+      <section>
+        <h2>2. Purpose & Description of the Service</h2>
+        <p>Automat provides workflow automation tools for content creators and digital managers, specifically allowing authorized publishing of video content and retrieval of engagement analytics on social media platforms, including TikTok.</p>
+      </section>
+
+      <section>
+        <h2>3. Third-Party Services & TikTok API Integration</h2>
+        <p>Automat integrates with third-party application programming interfaces, specifically the <strong>TikTok API</strong>. By connecting your TikTok account to Automat:</p>
+        <ul>
+          <li>You explicitly acknowledge and agree to comply with TikTok's <a href="https://www.tiktok.com/legal/terms-of-service" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);">Terms of Service</a> and <a href="https://www.tiktok.com/community-guidelines" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan);">Community Guidelines</a>.</li>
+          <li>You acknowledge that Automat is an independent software application and is not endorsed, directly affiliated, maintained, authorized, or sponsored by ByteDance Ltd. or TikTok Inc.</li>
+          <li>You grant Automat permission to request OAuth 2.0 authorization tokens strictly necessary to execute the actions you configure (publishing videos and fetching video analytics).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. User Responsibilities & Content Ownership</h2>
+        <p>You maintain full ownership and responsibility for any videos, captions, audio, and metadata you publish through Automat. You represent and warrant that:</p>
+        <ul>
+          <li>You possess all necessary intellectual property rights, licenses, and permissions for any content uploaded via Automat.</li>
+          <li>Your content does not violate any applicable copyright, trademark, privacy, or criminal laws.</li>
+          <li>You will not use Automat for spamming, abusive automation, deceptive practices, or any activity prohibited by TikTok's Developer Policies.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5. Disclaimer of Warranties & Limitation of Liability</h2>
+        <div class="highlight-box">
+          The Service is provided on an "AS IS" and "AS AVAILABLE" basis without warranties of any kind, whether express or implied.
+        </div>
+        <p>To the maximum extent permitted by applicable law, Automat and its developers shall not be liable for any direct, indirect, incidental, special, consequential, or punitive damages resulting from:</p>
+        <ul>
+          <li>Any interruption, suspension, or termination of TikTok API access by TikTok or third parties.</li>
+          <li>Account penalties, shadowbans, suspensions, or content removal applied to your TikTok account by TikTok moderators or algorithms.</li>
+          <li>Any errors, delays, or failures in automated publishing or analytics calculation.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Termination and Account Revocation</h2>
+        <p>You may revoke Automat's access to your TikTok account at any time either via the TikTok application settings under <em>Manage App Permissions</em> or by disconnecting your account in Automat. We reserve the right to suspend or terminate access for any user violating these terms.</p>
+      </section>
+
+      <section>
+        <h2>7. Modifications to Terms</h2>
+        <p>We reserve the right to modify these Terms of Service at any time. Any changes will be posted on this page with an updated effective date.</p>
+      </section>
+
+      <section>
+        <h2>8. Contact Information</h2>
+        <p>For questions or inquiries regarding these Terms of Service, please contact the developer team at: <strong style="color: var(--text-bright);">donovan.garmar@gmail.com</strong>.</p>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 Automat. All rights reserved. &bull; <a href="privacy.html" style="color: var(--text-muted); text-decoration: none;">Privacy Policy</a>
+    </footer>
+  </div>
+</body>
+</html>

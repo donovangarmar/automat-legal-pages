@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Automat</title>
+  <meta name="description" content="Privacy Policy for Automat application detailing OAuth 2.0 token handling, non-sale of personal data, secure storage, and revocation rights.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #0d1117;
+      --card-bg: rgba(22, 27, 34, 0.85);
+      --border-color: rgba(240, 246, 252, 0.1);
+      --text-main: #c9d1d9;
+      --text-bright: #f0f6fc;
+      --text-muted: #8b949e;
+      --accent-gradient: linear-gradient(135deg, #25f4ee, #fe2c55);
+      --accent-tiktok: #fe2c55;
+      --accent-cyan: #25f4ee;
+      --accent-green: #3fb950;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(37, 244, 238, 0.15) 0%, rgba(254, 44, 85, 0.05) 50%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 24px;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+
+    header {
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 9999px;
+      background: rgba(37, 244, 238, 0.1);
+      border: 1px solid rgba(37, 244, 238, 0.25);
+      color: var(--accent-cyan);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .nav-links a {
+      color: var(--accent-cyan);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: opacity 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      text-decoration: underline;
+      opacity: 0.85;
+    }
+
+    .content-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 36px;
+      backdrop-filter: blur(12px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    section {
+      margin-bottom: 32px;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--accent-gradient);
+      border-radius: 2px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight-box {
+      background: rgba(63, 185, 80, 0.1);
+      border-left: 3px solid var(--accent-green);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 16px 0;
+      font-size: 0.95rem;
+      color: #7ee787;
+    }
+
+    .info-box {
+      background: rgba(37, 244, 238, 0.05);
+      border: 1px solid rgba(37, 244, 238, 0.2);
+      border-radius: 8px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px 24px;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border-color);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">Data Protection</div>
+      <h1>Privacy Policy</h1>
+      <p class="subtitle">Effective Date: September 24, 2026 &bull; Application: <strong>Automat</strong></p>
+      <div class="nav-links">
+        <a href="terms.html">Terms of Service</a> &bull;
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </header>
+
+    <main class="content-card">
+      <section>
+        <h2>1. Overview</h2>
+        <p>At <strong>Automat</strong> ("we", "our", or "the Service"), we take user privacy and data security seriously. This Privacy Policy describes how Automat collects, uses, stores, and protects information when you connect your TikTok account and use our automated video publishing and analytics services.</p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect</h2>
+        <p>Automat operates under a principle of minimal data collection. We only access and store the information strictly required to perform the automation tasks you configure:</p>
+        <ul>
+          <li><strong>Authentication Credentials (OAuth 2.0 Tokens):</strong> When authorizing Automat via TikTok Login Kit, we receive short-lived OAuth access tokens and refresh tokens issued by TikTok. We never receive, store, or have access to your TikTok password.</li>
+          <li><strong>Basic Account Identifiers:</strong> TikTok OpenID / User ID and display name to associate your automation tasks with your profile.</li>
+          <li><strong>Content and Metadata:</strong> Videos, titles, tags, and scheduling parameters you upload or configure for automated publishing.</li>
+          <li><strong>Analytics Data:</strong> Video performance metrics (such as view counts, likes, comments, and shares) retrieved via official TikTok API endpoints for reporting purposes within your dashboard.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. How We Use Your Data</h2>
+        <p>Your data is used strictly for the following functional purposes:</p>
+        <ul>
+          <li>Publishing video content to your TikTok profile per your explicit instructions and schedules.</li>
+          <li>Fetching and displaying performance analytics for videos published through the Service.</li>
+          <li>Maintaining and refreshing active OAuth sessions to prevent workflow disruptions.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Non-Sale & Data Sharing Policy</h2>
+        <div class="highlight-box">
+          <strong>Strict Policy:</strong> We do NOT sell, rent, monetize, or trade your personal information, videos, or account data to third parties, data brokers, or advertisers under any circumstances.
+        </div>
+        <p>We do not share your data with any third party except as strictly necessary to interact directly with the TikTok API infrastructure to provide the Service or when required by binding legal process.</p>
+      </section>
+
+      <section>
+        <h2>5. Secure Storage and Protection</h2>
+        <p>We implement enterprise-grade security practices to protect your credentials and data:</p>
+        <ul>
+          <li><strong>Encryption in Transit:</strong> All communication between Automat, your client, and the TikTok API occurs exclusively over encrypted HTTPS/TLS 1.3 connections.</li>
+          <li><strong>Encryption at Rest:</strong> OAuth tokens and refresh tokens are encrypted at rest using industry-standard AES-256 encryption.</li>
+          <li><strong>Access Control:</strong> Stored credentials are restricted solely to automated processing jobs and are inaccessible to unauthorized personnel.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. Data Retention and Deletion</h2>
+        <p>We retain your OAuth tokens only for as long as your account remains connected to Automat. Once published, temporary video files uploaded to our processing queue are automatically purged after successful delivery to TikTok.</p>
+      </section>
+
+      <section>
+        <h2>7. User Rights and Revocation of Access</h2>
+        <p>You maintain complete control over your TikTok data and permissions. You have the right to:</p>
+        <ul>
+          <li><strong>Revoke Access Immediately:</strong> You can disconnect Automat at any time by going to your TikTok application settings: <em>Profile &rarr; Settings and Privacy &rarr; Security & permissions &rarr; Manage app permissions</em> and selecting <strong>Revoke Access</strong>.</li>
+          <li><strong>Request Data Deletion:</strong> You can request immediate deletion of all tokens, cached analytics, and task history associated with your user ID by contacting us at the email below. We fulfill deletion requests within 48 hours.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>8. Contact Information</h2>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or how your data is handled, please contact:</p>
+        <div class="info-box">
+          <strong>Automat Developer Support</strong><br>
+          Email: <a href="mailto:donovan.garmar@gmail.com" style="color: var(--accent-cyan); text-decoration: none;">donovan.garmar@gmail.com</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      &copy; 2026 Automat. All rights reserved. &bull; <a href="terms.html" style="color: var(--text-muted); text-decoration: none;">Terms of Service</a>
+    </footer>
+  </div>
+</body>
+</html>
